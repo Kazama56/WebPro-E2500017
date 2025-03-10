@@ -1,0 +1,149 @@
+home.css body {
+    font-family: 'Poppins', sans-serif;
+    /* Apply Poppins font globally */
+}
+
+.navbar {
+    text-align: center;
+    /* Center navbar items */
+}
+
+.hover-button {
+    padding: 10px 15px;
+    /* Padding for space between text and border */
+    border: 2px solid darkgray;
+    /* Light green border */
+    border-radius: 5px;
+    background-color: darkgray;
+    /* Default background */
+    color: black;
+    /* Default text color */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    /* Include transform transition */
+    display: inline-block;
+    /* Button size based on text */
+    text-align: center;
+    white-space: nowrap;
+    /* Prevent wrapping */
+    margin-right: 20px;
+    /* Space between buttons */
+}
+
+.hover-button:hover {
+    background-color: #a9a9a9;
+    /* Darker shade of gray on hover */
+    color: white;
+    /* Text color on hover */
+    transform: scale(1.05);
+    /* Pop animation on hover */
+}
+
+.social-media-buttons {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+}
+
+.social-button img {
+    width: 30px;
+    /* Size of the minimal logos */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.card {
+    margin-bottom: 20px;
+    /* Margin for the cards */
+}
+
+h2 {
+    font-weight: bold;
+    /* Bold for headings */
+}
+
+
+.container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.form-header button:hover {
+    background-color: #e0e0e0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+/* .hiden {
+    display: none;
+} */
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: darkgray;
+    /* Same color as the navbar */
+    color: white;
+    /* Text color for footer */
+}
+
+.toastify .toast-close {
+    color: rgb(255, 255, 255) !important;
+    /* Makes the close button white */
+    opacity: 1 !important;
+    /* Ensures full visibility */
+}

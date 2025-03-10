@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - Restaurant Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="location.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgray;">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+            <img style="border-radius: 10px;" src="Images/RestaurantImages/Final Logo - Made with PosterMyWall.jpg"
+                alt="Logo" width="30" class="mr-2">
+            <span style="font-family: 'Poppins', sans-serif; font-weight: bold;">Atharva's Foodies Restaurant</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav  mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn hover-button" href="home.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn hover-button" href="about.html"><strong>About</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn hover-button" href="location.html"><strong>Location</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn hover-button" href="menu.html"><strong>Menu</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn hover-button" href="signup.html"><strong>Login/Register</strong></a>
+                </li>
+                <div class="hiden">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="Images/RestaurantImages/profile.jpg" alt="User Profile"
+                                class="rounded-circle mr-2" width="30" height="30">
+                            <strong>Kalu Pandey</strong>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#" id="profileLink">
+                                <i class="fa-regular fa-user mr-2"></i> Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-right-from-bracket mr-2"></i> Logout
+                            </a>
+                        </div>
+
+                        <!-- Modal to show user details -->
+                        <div class="modal" id="userModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">User Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><strong>Username:</strong> <span id="modalUsername"></span></p>
+                                        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                                        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </div>
+            </ul>
+            <div class="social-media-buttons d-flex align-items-center justify-content-center ">
+                <a href="https://facebook.com" target="_blank" class="social-button mr-3"><img
+                        style="border-radius: 10px;" src="Images/SocialMediaIcons/Facebooklogo.jpg" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank" class="social-button mr-3"><img
+                        style="border-radius: 10px;" src="Images/SocialMediaIcons/Instagramlogo.png"
+                        alt="Instagram"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-button"><img style="border-radius: 10px;"
+                        src="Images/SocialMediaIcons/Tiktoklogo.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center mt-5">
+        <h1 style="font-family: 'Poppins', sans-serif; font-weight: bold;">Our Location</h1>
+        <p class="lead">Find us at the following address:</p>
+        <p><strong>Gaurighat-7, Kathmandu, Nepal.<br></strong></p>
+        <div class="map-container mb-5"
+            style="border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0401356850847!2d85.34649701505988!3d27.71325788279025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1900337804c7%3A0x9c6291c99d72613e!2sAtharva&#39;s%20Foodies%20Restaurant!5e0!3m2!1sen!2sus!4v1642529532283!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="restaurant-details mt-4 mb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-card p-3 bg-light rounded shadow-sm">
+                        <h4><i class="fas fa-clock mr-2"></i> Opening Hours</h4>
+                        <p>Monday - Friday: 11:00 AM - 10:00 PM<br>
+                            Saturday - Sunday: 11:00 AM - 11:00 PM<br>
+                            <small class="text-success"><i class="fas fa-check-circle"></i> Open Now</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card p-3 bg-light rounded shadow-sm">
+                        <h4><i class="fas fa-phone-alt mr-2"></i> Contact</h4>
+                        <p>Phone: +977-01-4419160<br>
+                            Mobile: +977-9851148520<br>
+                            Email: foodiesrestaurant2025@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card p-3 bg-light rounded shadow-sm">
+                        <h4><i class="fas fa-info-circle mr-2"></i> Additional Info</h4>
+                        <p>
+                            <i class="fas fa-wifi mr-1"></i> Free Wi-Fi<br>
+                            <i class="fas fa-car mr-1"></i> Street Parking Available<br>
+                            <i class="fas fa-wheelchair mr-1"></i> Wheelchair Accessible
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="bg-dark text-light text-center p-4 mt-5">
+        <div class="container">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: bold;">Why Choose Us?</h2>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <h5>Quality Ingredients</h5>
+                    <p>We use only the best and fresh ingredients for our foods</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Expert Chefs</h5>
+                    <p>Our chefs are highly trained and passionate about food.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Cozy Atmosphere</h5>
+                    <p>Enjoy your meal in a warm and welcoming environment.</p>
+                </div>
+            </div>
+            <h3 class="mt-4">Contact Us</h3>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@restaurant.com"
+                    style="color: white;">foodiesrestaurant2025@gmail.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/1234567890" style="color: white;">+1234567890</a>
+                <a href="https://wa.me/1234567890" target="_blank"><img
+                        src="Images/SocialMediaIcons/whatsapp-business-icon.png" alt="WhatsApp"
+                        style="width: 30px;"></a>
+            </p>
+            <div class="social-media-buttons d-flex justify-content-center mt-3">
+                <a href="https://facebook.com" target="_blank" class="social-button mr-3"><img
+                        style="border-radius: 10px;" src="Images/SocialMediaIcons/Facebooklogo.jpg" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank" class="social-button mr-3"><img
+                        style="border-radius: 10px;" src="Images/SocialMediaIcons/Instagramlogo.png"
+                        alt="Instagram"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-button"><img style="border-radius: 10px;"
+                        src="Images/SocialMediaIcons/Tiktoklogo.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="location.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>
